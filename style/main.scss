@@ -16,6 +16,11 @@ body {
 
 button {
 	cursor: pointer;
+	transition: all .2s;
+	&:hover {
+		transform: scale(1.05);
+		
+	}
 }
 
 input:focus {
@@ -62,7 +67,7 @@ input:focus {
 	color: white;
 	border: none;
 	right: 0;
-	background: $text;
+	background: #F9C22E;
 	border-radius: 5px;
 }
 
