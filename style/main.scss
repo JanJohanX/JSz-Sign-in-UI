@@ -18,8 +18,8 @@ button {
 	cursor: pointer;
 	transition: all .2s;
 	&:hover {
-		transform: scale(1.05);
-		
+		// box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+		transform: scale(1.07);
 	}
 }
 
@@ -67,7 +67,7 @@ input:focus {
 	color: white;
 	border: none;
 	right: 0;
-	background: #F9C22E;
+	background: #35A7FF;
 	border-radius: 5px;
 }
 
@@ -106,7 +106,7 @@ input:focus {
         pointer-events: none;
 		top: 24px;
 		font-size: 16px;
-        transition: all .18s;
+        transition: all .23s;
     }
 
     input {
@@ -123,11 +123,13 @@ input:focus {
 	top: 16px;
 
 	&:hover {
+		color: #35A7FF;
 		text-decoration: underline;
 	}
 }
 
 .selected {
     top: 3px !important;
-    font-size: 12px !important;
+	font-size: 12px !important;
+	color: #35A7FF;
 }
