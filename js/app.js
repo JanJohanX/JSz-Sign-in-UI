@@ -1,4 +1,4 @@
-function load() {
+const jsz = function() {
 	var inputs = Array.from(document.querySelectorAll('.jsz-signin-input')).forEach(function(input) {
 		input.addEventListener('focus', function() {
 			var label = input.previousElementSibling;
@@ -10,7 +10,12 @@ function load() {
 				label.classList.remove('selected');
 			}
 		})
+	});
+	document.getElementById('toggle-mode').addEventListener('click', function(e) {
+		document.body.classList.toggle('dark-mode');
 	})
 }
 
-window.onload = load;
+
+
+window.onload = jsz();

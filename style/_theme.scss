@@ -1,0 +1,11 @@
+@mixin light-theme {
+	--jsz-background: #fff;
+	--jsz-blue: #0072BB;
+	--jsz-text: #444;
+}
+
+@mixin dark-theme {
+	--jsz-background: #191919;
+	--jsz-blue: #35A7FF;
+	--jsz-text: #fff;
+}

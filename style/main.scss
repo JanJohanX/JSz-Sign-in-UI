@@ -1,4 +1,9 @@
 @import 'vars.scss';
+@import 'theme.scss';
+
+:root {
+	@include light-theme;
+}
 
 * {
 	margin: 0;
@@ -11,14 +16,17 @@ body {
 	width: 100vw;
 	height: 100vh;
 	overflow: hidden;
-	background-color: #fff;
+	background-color: var(--jsz-background);
+
+	&.dark-mode {
+		@include dark-theme;
+	}
 }
 
 button {
 	cursor: pointer;
 	transition: all .2s;
 	&:hover {
-		// box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
 		transform: scale(1.07);
 	}
 }
@@ -28,7 +36,7 @@ input:focus {
 }
 
 .jsz-signin-container {
-	color: $text;
+	color: var(--jsz-text);
 	position: relative;
 	// width: 280px;
 	max-width: 260px;
@@ -40,7 +48,11 @@ input:focus {
 	transform: translate(-50%, 40%);
 	margin: 0 8%;
 	box-shadow: 0px 16px 30px rgba(68, 68, 68, 0.15);
-	background-color: #fff;
+	body.dark-mode & {
+		box-shadow: none;
+		border: 1px solid #444;
+	}
+	background-color: var(--jsz-background);
 	border-radius: 12px;
 	padding: 24px;
 
@@ -67,7 +79,7 @@ input:focus {
 	color: white;
 	border: none;
 	right: 0;
-	background: #0072BB;
+	background-color: var(--jsz-blue);
 	border-radius: 5px;
 }
 
@@ -110,6 +122,7 @@ input:focus {
     }
 
     input {
+		color: var(--jsz-text);
 		padding: 5px 0;
 		margin: 16px 0;
     }
@@ -123,7 +136,7 @@ input:focus {
 	top: 16px;
 
 	&:hover {
-		color: #0072BB;
+		color: var(--jsz-blue);
 		text-decoration: underline;
 	}
 }
@@ -131,5 +144,5 @@ input:focus {
 .selected {
     top: 3px !important;
 	font-size: 12px !important;
-	color: #0072BB;
+	color: var(--jsz-blue) !important;
 }
